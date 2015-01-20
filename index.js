@@ -16,7 +16,15 @@ var hold="";
 
 
 
-        function blinkTitle(msg1,msg2,delay,isFocus = false,timeout = false){
+        function blinkTitle(msg1,msg2,delay,isFocus,timeout){
+          
+          if(isFocus == null){
+            isFocus = false;
+          }
+          
+          if(timeout == null){
+            timeout = false;
+          }
           
 
           document.title = msg1;
@@ -91,7 +99,7 @@ var hold="";
 
           }
 
-          function blinkTitleStop(timeout = false){
+          function blinkTitleStop(){
 
 
 
