@@ -2,109 +2,95 @@
   |-------(Pure Javascript TitleBar Alert Script)----------------------------------|
   |-----------Author : argunner (gunnerar7@gmail.com)(http://github.com/argunner)|
   */
-
-
 //To Do's
 // 1) Add Timeout Per Notification
 // 2) Simplify To JSON Arguments   
+var hold = "";
 
 
 
+function blinkTitle(msg1, msg2, delay, isFocus, timeout) {
+
+    if (isFocus == null) {
+        isFocus = false;
+    }
+
+    if (timeout == null) {
+        timeout = false;
+    }
 
 
-var hold="";
+    document.title = msg1;
+
+    if (isFocus == false) {
+
+        hold = window.setInterval(function() {
 
 
 
-        function blinkTitle(msg1,msg2,delay,isFocus,timeout){
-          
-          if(isFocus == null){
-            isFocus = false;
-          }
-          
-          if(timeout == null){
-            timeout = false;
-          }
-          
+            if (document.title == msg1) {
 
-          document.title = msg1;
+                document.title = msg2;
 
-          if(isFocus == false){
+            } else {
 
-            hold = window.setInterval(function() {
-
-              
-
-                if( document.title == msg1){
-
-                  document.title = msg2;
-              
-                }else{
-
-                  document.title = msg1;
-                }
-              
-              }, delay);
+                document.title = msg1;
             }
 
-            if(isFocus == true){
+        }, delay);
+    }
+
+    if (isFocus == true) {
 
 
-              var onPage = false;
-              var testflag = true;
+        var onPage = false;
+        var testflag = true;
 
-              var initialTitle = document.title;
+        var initialTitle = document.title;
 
-              window.onfocus = function () { 
-                onPage = true; 
-                
-            }; 
+        window.onfocus = function() {
+            onPage = true;
 
-            window.onblur = function () { 
-                onPage = false;
-                testflag = false;
-            }; 
+        };
 
-            
-
-
-
-              hold = window.setInterval(function() {
+        window.onblur = function() {
+            onPage = false;
+            testflag = false;
+        };
 
 
 
-                if( onPage == false){
-              
 
-                  if( document.title == msg1){
+        hold = window.setInterval(function() {
+
+
+
+            if (onPage == false) {
+
+
+                if (document.title == msg1) {
 
                     document.title = msg2;
-              
-                  }else{
+
+                } else {
 
                     document.title = msg1;
-                  }
                 }
-
-                            
-                
-              }, delay);
-              
             }
 
 
 
+        }, delay);
+
+    }
 
 
 
-          }
 
-          function blinkTitleStop(){
+}
 
+function blinkTitleStop() {
 
+    clearInterval(hold);
 
-            clearInterval(hold);
-
-        }
-
-        
+}
