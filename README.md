@@ -28,6 +28,6 @@ Getting Started
 http://argunner.github.io/blinkTitle.js/
 
 #Not Yet Implemented
-1. Timeout Implementation
+1. <s> Timeout Implementation </s> implemented by [@michaeldjeffrey](https://github.com/michaeldjeffrey)
 2. Simplify Arguments By Converting them To JSON
 3. Minifying Script
