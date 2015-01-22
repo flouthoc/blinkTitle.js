@@ -19,6 +19,9 @@ function blinkTitle(msg1, msg2, delay, isFocus, timeout) {
         timeout = false;
     }
 
+    if(timeout){
+        setTimeout(blinkTitleStop, timeout);
+    }
 
     document.title = msg1;
 
