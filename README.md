@@ -15,11 +15,25 @@ Getting Started
 ####Regular Blink
 ```js
   blinkTitle('message1','message2',delayTime,false);
+````
+  
+####Regular Blink with Timout (milliseconds) (stops after 'timeout')
+```js
+  blinkTitle('message1','message2',delayTime,false,timeout);
+  
   ```
-####If You Want Notify When User is On Other Tab
+  
+  ####If You Want Notify When User is On Other Tab
 ```js
   blinkTitle('message1','message2',delayTime,true);
+  
   ```
+####If You Want Notify When User is On Other Tab with Timout (milliseconds) (stops after 'timeout')
+```js
+  blinkTitle('message1','message2',delayTime,true);
+```
+
+
 ####Stop 
 ```js
   blinkTitleStop();
