@@ -92,16 +92,8 @@ function blinkTitle(msg1, msg2, delay, isFocus, timeout) {
 
 }
 
-function blinkTitleStop(duration) {
+function blinkTitleStop() {
 
-    if(duration == null){
-        duration = 0;
-    }
-    
-    setTimeout(function(){
-
-        clearInterval(hold);
-    
-    }, duration);
+    clearInterval(hold);
 
 }
