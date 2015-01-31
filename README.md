@@ -1,5 +1,5 @@
 # blinkTitle.js
-Is a Pure Javascript Implementation of TitleBar Alert or Notification.It Can Perform Blinking of Html Titlebar for Titlebar Alert or Titlebar Notification http://argunner.github.io/blinkTitle.js/
+Is a Pure Javascript Implementation of TitleBar Alert or Notification.It Can Perform Blinking of HTML Titlebar for Titlebar Alert or Titlebar Notification http://argunner.github.io/blinkTitle.js/
 
 #Preview
 ![Preview](https://github.com/argunner/blinkTitle.js/blob/master/op.gif)
