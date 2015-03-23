@@ -1,6 +1,6 @@
 /*|-------------blinkTitle.js----------------------------------------------------|
   |-------(Pure Javascript TitleBar Alert Script)----------------------------------|
-  |-----------Author : argunner (gunnerar7@gmail.com)(http://github.com/argunner)|
+  |-----------Author : flouthoc (gunnerar7@gmail.com)(http://github.com/flouthoc)|
   */
 //To Do's
 // 1) Add Timeout Per Notification
