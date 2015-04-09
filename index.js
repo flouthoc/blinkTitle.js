@@ -1,99 +1,35 @@
-/*|-------------blinkTitle.js----------------------------------------------------|
-  |-------(Pure Javascript TitleBar Alert Script)----------------------------------|
-  |-----------Author : flouthoc (gunnerar7@gmail.com)(http://github.com/flouthoc)|
-  */
-//To Do's
-// 1) Add Timeout Per Notification
-// 2) Simplify To JSON Arguments   
-var hold = "";
+var hold
 
+function blinkTitle (opts) {
+  if (!opts) opts = {}
+  var delay = opts.delay || 0
+  var message = opts.message || ''
+  var notifyOffPage = opts.notifyOffPage || false
+  var timeout = opts.timeout || false
+  var title = opts.title || document.title
 
+  if (notifyOffPage) {
+    hold = setInterval(function () {
+      if (document.hidden) blink()
+    }, delay)
+  } else {
+    hold = setInterval(function () {
+      blink()
+    }, delay)
+  }
 
-function blinkTitle(msg1, msg2, delay, isFocus, timeout) {
+  function blink () {
+    document.title === title ?
+      document.title = message :
+      document.title = title
+  }
 
-    if (isFocus == null) {
-        isFocus = false;
-    }
-
-    if (timeout == null) {
-        timeout = false;
-    }
-
-    if(timeout){
-        setTimeout(blinkTitleStop, timeout);
-    }
-
-    document.title = msg1;
-
-    if (isFocus == false) {
-
-        hold = window.setInterval(function() {
-
-
-
-            if (document.title == msg1) {
-
-                document.title = msg2;
-
-            } else {
-
-                document.title = msg1;
-            }
-
-        }, delay);
-    }
-
-    if (isFocus == true) {
-
-
-        var onPage = false;
-        var testflag = true;
-
-        var initialTitle = document.title;
-
-        window.onfocus = function() {
-            onPage = true;
-
-        };
-
-        window.onblur = function() {
-            onPage = false;
-            testflag = false;
-        };
-
-
-
-
-        hold = window.setInterval(function() {
-
-
-
-            if (onPage == false) {
-
-
-                if (document.title == msg1) {
-
-                    document.title = msg2;
-
-                } else {
-
-                    document.title = msg1;
-                }
-            }
-
-
-
-        }, delay);
-
-    }
-
-
-
+  if (timeout) setTimeout(blinkTitleStop, timeout)
 
 }
 
-function blinkTitleStop() {
-
-    clearInterval(hold);
-
+function blinkTitleStop () {
+  clearInterval(hold)
 }
+
+module.exports = blinkTitle
