@@ -14,23 +14,44 @@ Getting Started
 
 ####Regular Blink
 ```js
-  blinkTitle('message1','message2',delayTime,false);
+  blinkTitle({
+    title: 'your-title', //optional
+    message: 'your-message',
+    delay: 1200
+  });
+ 
 ````
   
-####Regular Blink with Timeout (milliseconds) (stops after 'timeout')
+####Regular Blink with Timeout (milliseconds) (stops after 'duration')
 ```js
-  blinkTitle('message1','message2',delayTime,false,timeout);
+  blinkTitle({
+    title: 'your-title',
+    message: 'your-message',
+    delay: 1200,
+    duration: 5000
+  });
 
 ```
 
-####If You Want Notify When User is On Other Tab
+#### Notify When User is On Other Tab
 ```js
-  blinkTitle('message1','message2',delayTime,true);
+  blinkTitle({
+    title: 'your-title',
+    message: 'your-message',
+    delay: 1200,
+    notifyOffPage: true
+  });
   
-  ```
-####If You Want Notify When User is On Other Tab with Timeout (milliseconds) (stops after 'timeout')
+```
+#### Notify When User is On Other Tab with Timeout (milliseconds) (stops after 'timeout')
 ```js
-  blinkTitle('message1','message2',delayTime,true);
+  blinkTitle({
+    title: 'your-title',
+    message: 'your-message',
+    delay: 1200,
+    duration: 5000,
+    notifyOffPage: true
+  });
 ```
 
 
@@ -41,7 +62,3 @@ Getting Started
 #Examples
 http://flouthoc.github.io/blinkTitle.js/
 
-#Not Yet Implemented
-1. <s> Timeout Implementation </s> implemented by [@michaeldjeffrey](https://github.com/michaeldjeffrey)
-2. Simplify Arguments By Converting them To JSON
-3. Minifying Script
