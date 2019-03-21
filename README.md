@@ -1,18 +1,21 @@
 # blinkTitle.js
 Is a Pure Javascript Implementation of TitleBar Alert or Notification.It Can Perform Blinking of HTML Titlebar for Titlebar Alert or Titlebar Notification http://flouthoc.github.io/blinkTitle.js/
 
-#Preview
+# Preview
+
 ![Preview](https://github.com/flouthoc/blinkTitle.js/blob/master/op.gif)
 
-#Usage
+# Usage
+
 Getting Started
 ```html
 <script type="text/javascript" src="https://raw.githubusercontent.com/flouthoc/blinkTitle.js/master/index.js"></script>
 ```
 
-#Usage
+# Usage
 
-####Regular Blink
+#### Regular Blink
+
 ```js
   blinkTitle({
     title: 'your-title', //optional
@@ -22,7 +25,8 @@ Getting Started
  
 ````
   
-####Regular Blink with Timeout (milliseconds) (stops after 'duration')
+#### Regular Blink with Timeout (milliseconds) (stops after 'duration')
+
 ```js
   blinkTitle({
     title: 'your-title',
@@ -34,6 +38,7 @@ Getting Started
 ```
 
 #### Notify When User is On Other Tab
+
 ```js
   blinkTitle({
     title: 'your-title',
@@ -55,10 +60,10 @@ Getting Started
 ```
 
 
-####Stop 
+#### Stop 
 ```js
   blinkTitleStop();
   ```
-#Examples
+# Examples
 http://flouthoc.github.io/blinkTitle.js/
 
